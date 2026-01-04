@@ -1,0 +1,345 @@
+/* ---------- Root Theme Variables ---------- */
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-border-color: var(--border);
+  --bs-card-bg: var(--card);
+  --bs-modal-bg: var(--card);
+  --bs-modal-color: var(--text);
+  --bs-dropdown-bg: var(--card);
+  --bs-dropdown-color: var(--text);
+  --bs-dropdown-link-color: var(--text);
+  --bs-dropdown-link-hover-bg: rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e5e7eb;
+  --accent: #38bdf8;
+  --border: #334155;
+
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-border-color: var(--border);
+  --bs-card-bg: var(--card);
+  --bs-modal-bg: var(--card);
+  --bs-modal-color: var(--text);
+  --bs-dropdown-bg: var(--card);
+  --bs-dropdown-color: var(--text);
+  --bs-dropdown-link-color: var(--text);
+  --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Base ---------- */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+  font-family: "Nunito", sans-serif;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-primary {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.dark-mode .btn-secondary:hover,
+.dark-mode .btn-secondary:focus {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Navbar ---------- */
+.app-navbar {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus,
+.theme-btn i {
+  color: var(--text);
+}
+
+.search-box {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.search-box::placeholder {
+  color: #9ca3af;
+}
+
+.theme-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+/* ---------- Cards ---------- */
+.app-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---------- Notes ---------- */
+.note-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  margin-bottom: 15px;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.18s ease;
+}
+
+.note-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  z-index: 3;
+}
+
+.note-preview {
+  margin-right: 28px;
+}
+
+.note-card-header {
+  padding-right: 28px;
+  margin-bottom: 6px;
+}
+
+.note-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.25;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note-desc {
+  color: var(--text);
+  opacity: 0.9;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-right: 6px;
+}
+
+.note-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 6px;
+}
+
+.note-card-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.note-card-menu .dropdown-menu {
+  z-index: 1055;
+}
+
+.note-menu-btn {
+  color: var(--text);
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+.note-menu-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode .note-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.note-menu {
+  background: var(--card);
+  border: 1px solid var(--border);
+  min-width: 180px;
+  font-family: "Nunito", sans-serif;
+}
+
+.note-menu .dropdown-item {
+  color: var(--text);
+}
+
+.note-menu .dropdown-item:hover,
+.note-menu .dropdown-item:focus {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode .note-menu .dropdown-item:hover,
+.dark-mode .note-menu .dropdown-item:focus {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.note-menu .dropdown-divider {
+  border-top: 1px solid var(--border);
+}
+
+.empty-state {
+  text-align: center;
+}
+
+.empty-state-title {
+  font-weight: 600;
+}
+
+#viewNoteContent {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* ---------- Inputs ---------- */
+textarea,
+input {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  font-family: "Nunito", sans-serif;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.dark-mode textarea::placeholder,
+.dark-mode input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.form-control:focus {
+  border-color: var(--accent) !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Modal ---------- */
+.app-modal {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-family: "Nunito", sans-serif;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: var(--border);
+}
+
+.dark-mode .btn-close {
+  filter: invert(1) grayscale(100%);
+}
+
+/* ---------- Toast ---------- */
+.toast {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-family: "Nunito", sans-serif;
+}
+
+/* ---------- Spinner ---------- */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.dark-mode .spinner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Delete Confirm Modal ---------- */
+#deleteTitleSection {
+  margin-top: 1rem;
+}
+
+#confirmDeleteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dark-mode #deleteTitleSection .text-muted {
+  color: #9ca3af !important;
+  opacity: 1;
+}
+
+.dark-mode #deleteTitleInput::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
